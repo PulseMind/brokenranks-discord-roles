@@ -12,20 +12,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pl.pulsemind.listeners.ReadyListener;
 
-@RequiredArgsConstructor
 public class BrokenDiscordRoles {
 
+    @NonNull
     @Getter (AccessLevel.PUBLIC)
-    private final Logger logger;
+    private final Logger logger = LoggerFactory.getLogger(BrokenDiscordRoles.class);
 
     @NonNull
     @Getter (AccessLevel.PRIVATE)
-    private final Dotenv dotEnv;
-
-    public BrokenDiscordRoles() {
-        this.logger = LoggerFactory.getLogger(BrokenDiscordRoles.class);
-        this.dotEnv = Dotenv.load();
-    }
+    private final Dotenv dotEnv = Dotenv.load();
 
     private void registerListeners(JDABuilder jdaBuilder) {
         jdaBuilder.addEventListeners(new ReadyListener());
