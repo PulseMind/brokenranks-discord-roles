@@ -22,11 +22,11 @@ public class BrokenDiscordRoles {
     @Getter (AccessLevel.PRIVATE)
     private final Dotenv dotEnv = Dotenv.load();
 
-    private void registerListeners(JDABuilder jdaBuilder) {
+    private void registerListeners(@NonNull JDABuilder jdaBuilder) {
         jdaBuilder.addEventListeners(new ReadyListener());
     }
 
-    private void enableIntents(JDABuilder jdaBuilder) {
+    private void enableIntents(@NonNull JDABuilder jdaBuilder) {
         jdaBuilder.enableIntents(GatewayIntent.MESSAGE_CONTENT);
     }
 
