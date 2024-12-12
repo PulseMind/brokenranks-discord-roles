@@ -1,13 +1,24 @@
 package pl.pulsemind;
 
-import io.github.cdimascio.dotenv.Dotenv;
-import net.dv8tion.jda.api.JDABuilder;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Accessors;
+import org.slf4j.Logger;
 
 public class Main {
 
+    @Accessors(fluent = true)
+    @Getter (AccessLevel.PUBLIC)
+    @Setter (AccessLevel.PRIVATE)
+    private static BrokenDiscordRoles instance;
+
     public static void main(String[] args) {
-        Dotenv dotenv = Dotenv.load();
-        JDABuilder builder = JDABuilder.createDefault(dotenv.get("DISCORD_BOT_TOKEN"));
-        builder.build();
+        instance(new BrokenDiscordRoles());
+        instance().run();
+    }
+
+    public static Logger getLogger() {
+        return instance().getLogger();
     }
 }
