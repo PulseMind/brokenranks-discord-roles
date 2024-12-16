@@ -1,35 +1,27 @@
 package pl.pulsemind.proffesion;
 
+import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import net.dv8tion.jda.api.entities.Icon;
-import net.dv8tion.jda.api.entities.Role;
-import org.jetbrains.annotations.Nullable;
-import pl.pulsemind.utils.RoleUtil;
+import pl.pulsemind.Main;
 
 import java.awt.*;
 
-/** TODO: Role Color & Role Icons */
 @RequiredArgsConstructor
 public enum Proffesion {
-    MAG("Mag Ognia"),
-    BARBA("Barbarzyńca"),
-    RYCERZ("Rycerz"),
-    DRUID("Druid"),
-    VODOO("Vodoo"),
-    LUCZNIK("Łucznik"),
-    SHEED("Sheed");
+    FIRE_MAGE("\uD83D\uDD25 " + (Main.instance().isPolish() ? "Mag Ognia" : "Fire Mage"), Color.ORANGE),
+    VOODOO("\uD83E\uDE84 Voodoo", Color.PINK.darker()),
+    BARBARIAN("⚔\uFE0F " + (Main.instance().isPolish() ? "Barbarzyńca" : "Barbarian"), Color.RED.darker()),
+    DRUID("\uD83C\uDF3F Druid", Color.GREEN.darker()),
+    ARCHER("\uD83C\uDFF9" + (Main.instance().isPolish() ? "Łucznik" : "Archer"), Color.YELLOW.darker()),
+    SHEED("\uD83E\uDD4A Sheed", Color.BLUE.darker()),
+    KNIGHT("\uD83D\uDEE1\uFE0F " + (Main.instance().isPolish() ? "Rycerz" : "Knight"), Color.BLUE.brighter());
 
     @NonNull
-    String name;
+    @Getter
+    private final String roleName;
 
-    @Nullable
-    Color color;
-
-    @Nullable
-    Icon icon;
-
-    public Role getRole(@NonNull String guildId) {
-        return RoleUtil.getRole(guildId, guildId);
-    }
+    @NonNull
+    @Getter
+    private final Color roleColor;
 }

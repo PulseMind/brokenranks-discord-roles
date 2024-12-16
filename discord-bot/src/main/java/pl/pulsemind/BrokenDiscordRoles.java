@@ -8,6 +8,7 @@ import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import pl.pulsemind.listeners.GuildMessageListener;
 import pl.pulsemind.listeners.ReadyListener;
 
 public class BrokenDiscordRoles {
@@ -17,7 +18,7 @@ public class BrokenDiscordRoles {
     private final Logger logger = LoggerFactory.getLogger(BrokenDiscordRoles.class);
 
     @NonNull
-    @Getter (AccessLevel.PRIVATE)
+    @Getter (AccessLevel.PUBLIC)
     private final Dotenv dotEnv = Dotenv.load();
 
     @NonNull
@@ -26,7 +27,10 @@ public class BrokenDiscordRoles {
     private JDA jda;
 
     private void registerListeners(@NonNull JDABuilder jdaBuilder) {
-        jdaBuilder.addEventListeners(new ReadyListener());
+        jdaBuilder.addEventListeners(
+                new ReadyListener(),
+                new GuildMessageListener()
+        );
     }
 
     private void enableIntents(@NonNull JDABuilder jdaBuilder) {
@@ -43,5 +47,9 @@ public class BrokenDiscordRoles {
 
         jdaBuilder.setActivity(Activity.playing("Broken Ranks"));
         setJda(jdaBuilder.build());
+    }
+
+    public boolean isPolish() {
+        return Boolean.parseBoolean(this.getDotEnv().get("POLISH_LANGUAGE"));
     }
 }
