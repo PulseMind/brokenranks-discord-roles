@@ -20,7 +20,7 @@ public class ReadyListener extends ListenerAdapter {
     public void onGuildReady(GuildReadyEvent event) {
         final String guildId = event.getGuild().getId();
         Arrays.stream(Proffesion.values())
-                .filter(proffesion -> RoleUtil.getRole(guildId, proffesion.name()) == null)
+                .filter(proffesion -> RoleUtil.getRole(guildId, proffesion.getRoleName()) == null)
                 .forEach(proffesion -> RoleUtil.createRole(
                         guildId,
                         proffesion.getRoleName(),

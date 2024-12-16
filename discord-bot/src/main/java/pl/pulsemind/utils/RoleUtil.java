@@ -28,7 +28,7 @@ public class RoleUtil {
         Guild guild = Main.instance().getJda().getGuildById(guildId);
         if(guild == null) return null;
         return guild.getRoles().stream()
-                .filter(role -> role.getName().equalsIgnoreCase(name))
+                .filter(role -> role.getName().equals(name))
                 .findAny()
                 .orElse(null);
     }
