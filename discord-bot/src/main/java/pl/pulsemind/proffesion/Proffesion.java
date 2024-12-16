@@ -9,13 +9,13 @@ import java.awt.*;
 
 @RequiredArgsConstructor
 public enum Proffesion {
-    FIRE_MAGE("\uD83D\uDD25", Main.instance().isPolish() ? "Mag Ognia" : "Fire Mage", Color.ORANGE),
-    VOODOO("\uD83E\uDE84", "Voodoo", Color.ORANGE),
-    BARBARIAN("⚔\uFE0F", Main.instance().isPolish() ? "Barbarzyńca" : "Barbarian", Color.ORANGE),
-    DRUID("\uD83C\uDF3F", "Druid", Color.ORANGE),
-    ARCHER("\uD83C\uDFF9", Main.instance().isPolish() ? "Łucznik" : "Archer", Color.ORANGE),
-    SHEED("\uD83E\uDD4A", "Sheed", Color.ORANGE),
-    KNIGHT("\uD83D\uDEE1\uFE0F", Main.instance().isPolish() ? "Rycerz" : "Knight", Color.ORANGE);
+    FIRE_MAGE("\uD83D\uDD25", Main.instance().isPolish() ? "Mag Ognia" : "Fire Mage", Color.decode("#8C4F00")),
+    VOODOO("\uD83E\uDE84", "Voodoo", Color.decode("#720C71")),
+    BARBARIAN("⚔\uFE0F", Main.instance().isPolish() ? "Barbarzyńca" : "Barbarian", Color.decode("#560000")),
+    DRUID("\uD83C\uDF3F", "Druid", Color.decode("#3D6A16")),
+    ARCHER("\uD83C\uDFF9", Main.instance().isPolish() ? "Łucznik" : "Archer", Color.decode("#301D13")),
+    SHEED("\uD83E\uDD4A", "Sheed", Color.decode("#093E80")),
+    KNIGHT("\uD83D\uDEE1\uFE0F", Main.instance().isPolish() ? "Rycerz" : "Knight", Color.decode("#6E9185"));
 
     @NonNull
     private final String emoji;
