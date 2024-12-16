@@ -26,6 +26,9 @@ public class BrokenDiscordRoles {
     @Setter (AccessLevel.PRIVATE)
     private JDA jda;
 
+    @Getter
+    private final boolean isPolish = Boolean.parseBoolean(dotEnv.get("POLISH_LANGUAGE"));
+
     private void registerListeners(@NonNull JDABuilder jdaBuilder) {
         jdaBuilder.addEventListeners(
                 new ReadyListener(),
@@ -47,9 +50,5 @@ public class BrokenDiscordRoles {
 
         jdaBuilder.setActivity(Activity.playing("Broken Ranks"));
         setJda(jdaBuilder.build());
-    }
-
-    public boolean isPolish() {
-        return Boolean.parseBoolean(this.getDotEnv().get("POLISH_LANGUAGE"));
     }
 }
