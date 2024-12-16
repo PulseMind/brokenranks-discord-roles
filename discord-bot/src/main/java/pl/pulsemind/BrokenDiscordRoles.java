@@ -1,10 +1,8 @@
 package pl.pulsemind;
 
 import io.github.cdimascio.dotenv.Dotenv;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
+import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.requests.GatewayIntent;
@@ -21,6 +19,11 @@ public class BrokenDiscordRoles {
     @NonNull
     @Getter (AccessLevel.PRIVATE)
     private final Dotenv dotEnv = Dotenv.load();
+
+    @NonNull
+    @Getter (AccessLevel.PUBLIC)
+    @Setter (AccessLevel.PRIVATE)
+    private JDA jda;
 
     private void registerListeners(@NonNull JDABuilder jdaBuilder) {
         jdaBuilder.addEventListeners(new ReadyListener());
@@ -39,6 +42,6 @@ public class BrokenDiscordRoles {
         this.enableIntents(jdaBuilder);
 
         jdaBuilder.setActivity(Activity.playing("Broken Ranks"));
-        jdaBuilder.build();
+        setJda(jdaBuilder.build());
     }
 }
