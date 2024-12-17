@@ -48,7 +48,7 @@ public class CommandListener extends ListenerAdapter {
 
             guild.addRoleToMember(member, role).queue(
                     success -> event.reply(String.format("Profesja %s została dodana.", role.getAsMention())).queue(),
-                    error -> event.reply(String.format("**Błąd!** Nie udało się dodać profesji. (%s)", error.getMessage()))
+                    error -> event.reply(String.format("**Błąd!** Nie udało się dodać profesji. (%s)", error.getMessage())).queue()
             );
         }
     }
