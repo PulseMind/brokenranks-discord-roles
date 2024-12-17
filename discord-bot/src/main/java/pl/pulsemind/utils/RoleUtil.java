@@ -34,7 +34,7 @@ public class RoleUtil {
                 .orElse(null);
     }
 
-    public boolean hasRole(Member member, String roleId) {
+    public boolean hasRole(@NonNull Member member, @NonNull String roleId) {
         for (Role role : member.getRoles())
             if (role.getId().equals(roleId))
                 return true;
