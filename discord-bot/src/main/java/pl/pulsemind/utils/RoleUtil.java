@@ -3,6 +3,7 @@ package pl.pulsemind.utils;
 import lombok.NonNull;
 import lombok.experimental.UtilityClass;
 import net.dv8tion.jda.api.entities.Guild;
+import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Role;
 import net.dv8tion.jda.api.requests.restaction.RoleAction;
 import org.jetbrains.annotations.Nullable;
@@ -31,5 +32,13 @@ public class RoleUtil {
                 .filter(role -> role.getName().equals(name))
                 .findAny()
                 .orElse(null);
+    }
+
+    public boolean hasRole(Member member, String roleId) {
+        for (Role role : member.getRoles())
+            if (role.getId().equals(roleId))
+                return true;
+
+        return false;
     }
 }

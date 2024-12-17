@@ -8,22 +8,22 @@ import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pl.pulsemind.listeners.GuildMessageListener;
 import pl.pulsemind.listeners.ReadyListener;
+import pl.pulsemind.listeners.CommandListener;
 
 public class BrokenDiscordRoles {
 
     @NonNull
-    @Getter (AccessLevel.PUBLIC)
+    @Getter(AccessLevel.PUBLIC)
     private final Logger logger = LoggerFactory.getLogger(BrokenDiscordRoles.class);
 
     @NonNull
-    @Getter (AccessLevel.PUBLIC)
+    @Getter(AccessLevel.PUBLIC)
     private final Dotenv dotEnv = Dotenv.load();
 
     @NonNull
-    @Getter (AccessLevel.PUBLIC)
-    @Setter (AccessLevel.PRIVATE)
+    @Getter(AccessLevel.PUBLIC)
+    @Setter(AccessLevel.PRIVATE)
     private JDA jda;
 
     @Getter
@@ -32,7 +32,7 @@ public class BrokenDiscordRoles {
     private void registerListeners(@NonNull JDABuilder jdaBuilder) {
         jdaBuilder.addEventListeners(
                 new ReadyListener(),
-                new GuildMessageListener()
+                new CommandListener()
         );
     }
 
