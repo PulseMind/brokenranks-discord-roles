@@ -18,7 +18,7 @@ public class BrokenDiscordRoles {
     private final Logger logger = LoggerFactory.getLogger(BrokenDiscordRoles.class);
 
     @NonNull
-    @Getter(AccessLevel.PUBLIC)
+    @Getter(AccessLevel.PRIVATE)
     private final Dotenv dotEnv = Dotenv.load();
 
     @NonNull
