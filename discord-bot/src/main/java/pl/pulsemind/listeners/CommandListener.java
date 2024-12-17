@@ -41,7 +41,7 @@ public class CommandListener extends ListenerAdapter {
             if(RoleUtil.hasRole(member, role.getId())) {
                 guild.removeRoleFromMember(member, role).queue(
                         success -> event.reply(String.format("Profesja %s została usunięta.", role.getAsMention())).queue(),
-                        error -> event.reply(String.format("**Błąd!** Nie udało się usunąc profesji. (%s)", error.getMessage())).queue()
+                        error -> event.reply(String.format("**Błąd!** Nie udało się usunąć profesji. (%s)", error.getMessage())).queue()
                 );
                 return;
             }
