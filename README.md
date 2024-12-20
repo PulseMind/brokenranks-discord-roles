@@ -18,16 +18,13 @@ A powerful Discord bot that brings your Broken Ranks professions into your Disco
 - 💬 Easy-to-use `/profession` command for role management
 - ⚔️ Supports all Broken Ranks professions
 - 🛡️ Secure role management system
-- 🇺🇸 Supports English language
-- 🇵🇱 Supports Polish language
+- 🌐 Multi-language support:
+  - 🇺🇸 English
+  - 🇵🇱 Polish
 
-## 💻 Usage
+## 💻 Commands
 
-### Commands
-
-- `/profession` - Assign profession roles to users based on their Broken Ranks character
-
-Example:
+### Managing Professions
 
 ```
 /profession <in-game profession name>
@@ -35,15 +32,17 @@ Example:
 
 ### Available Professions
 
-- <img src="image/profession/fire_mage.png" alt="Fire Mage" width="20" height="20"> Fire Mage
-- <img src="image/profession/barbarian.png" alt="Barbarian" width="20" height="20"> Barbarian
-- <img src="image/profession/archer.png" alt="Archer" width="20" height="20"> Archer
-- <img src="image/profession/sheed.png" alt="Sheed" width="20" height="20"> Sheed
-- <img src="image/profession/druid.png" alt="Druid" width="20" height="20"> Druid
-- <img src="image/profession/knight.png" alt="Knight" width="20" height="20"> Knight
-- <img src="image/profession/voodoo.png" alt="Voodoo" width="20" height="20"> Voodoo
+| Icon                                                                              | Profession |
+| --------------------------------------------------------------------------------- | ---------- |
+| <img src="image/profession/fire_mage.png" alt="Fire Mage" width="20" height="20"> | Fire Mage  |
+| <img src="image/profession/barbarian.png" alt="Barbarian" width="20" height="20"> | Barbarian  |
+| <img src="image/profession/archer.png" alt="Archer" width="20" height="20">       | Archer     |
+| <img src="image/profession/sheed.png" alt="Sheed" width="20" height="20">         | Sheed      |
+| <img src="image/profession/druid.png" alt="Druid" width="20" height="20">         | Druid      |
+| <img src="image/profession/knight.png" alt="Knight" width="20" height="20">       | Knight     |
+| <img src="image/profession/voodoo.png" alt="Voodoo" width="20" height="20">       | Voodoo     |
 
-## 🚀 Getting Started
+## 🚀 Installation Guide
 
 ### Prerequisites
 
@@ -52,7 +51,7 @@ Example:
 - Discord Bot Token
 - Discord Server with administrator permissions
 
-### Installation
+### Setup Steps
 
 1. Clone the repository
 
@@ -60,77 +59,68 @@ Example:
 git clone https://github.com/PulseMind/brokenranks-discord-roles.git
 ```
 
-2. Go to Discord Bot files
+2. Navigate to the bot directory
 
 ```bash
 cd ./discord-bot
 ```
 
-3. Build the project
-
-```bash
-./gradlew build
-```
-
-4. Configure your environment variables
+3. Set up configuration
 
 ```bash
 cp .env.example .env
-# Edit .env file with your Discord Bot Token and settings.
+# Edit .env file with your Discord Bot Token and settings
 ```
 
-5. Start the bot
+4. Launch the bot
 
 ```bash
 ./gradlew run
 ```
 
+## 🗺️ Development Roadmap
+
+- [ ] Complete English & Polish language support
+- [ ] VPS server deployment
+- [ ] Public website launch
+- [ ] First public release
+
 ## 🤝 Contributing
 
-Contributions are welcome! Feel free to:
+We welcome contributions! Here's how you can help:
 
 1. Fork the repository
-2. Create a new branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 🗺️ Roadmap (TODO List)
-
-- Full language support for English & Polish (I should add in next commit)
-- Setting up the bot on a VPS server
-- Creating a public website for the bot
-- The first released version of the bot for public use
+2. Create a descriptive branch for your changes:
+   - Features: `feature/add-new-feature`
+   - Fixes: `fix/role-sync-issue`
+3. Make your changes
+4. Push and open a Pull Request
 
 ## 📝 License
 
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details. This means:
+Licensed under GNU General Public License v3.0 ([LICENSE](LICENSE))
 
-- ✅ You can use this code commercially
-- ✅ You can modify this code
-- ✅ You can distribute this code
-- ✅ You can use this code privately
-- ✅ You can use patent claims
-- ❗ You MUST disclose the source code when distributing
-- ❗ You MUST state changes to the code
-- ❗ You MUST distribute under the same license
-- ❗ You MUST include copyright and license notices
+Key points:
 
-## 🌟 Acknowledgments
+- ✅ Commercial use allowed
+- ✅ Modification allowed
+- ✅ Distribution allowed
+- ❗ Source code must be disclosed
+- ❗ Same license must be used
+- ❗ Changes must be documented
 
-- Thanks to the Broken Ranks community
-- All contributors who help improve this bot
-- JDA (Java Discord API) team for their amazing library
+## 📞 Support & Contact
 
-## 📞 Support
+Need help or found a bug?
 
-If you need help or want to report a bug:
-
-- Create an issue in this repository
-- Contact me directly on Discord: `pulsemindpl`
+- Open an [Issue](../../issues)
+- Contact: `pulsemindpl` on Discord
+- Contact: `contact@pulsemind.pl` with E-Mail
 
 ---
 
-Made with ❤️ for the Broken Ranks community
+<div align="center">
+    Made with ❤️ for the Broken Ranks community
+</div>
 
 ![PULSEMIND BANNER](https://pulsemind.pl/image/BANNER.png)
