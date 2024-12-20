@@ -1,18 +1,50 @@
 # 🎮 Broken Ranks Profession Bot
 
+![PULSEMIND BANNER](https://pulsemind.pl/image/BANNER.png)
+
 [![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/)
 [![Broken Ranks](https://img.shields.io/badge/Broken%20Ranks-FF4646?style=for-the-badge)](https://brokenranks.com/)
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/)
 [![GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge)](https://www.gnu.org/licenses/gpl-3.0)
 
-A powerful Discord bot that brings your Broken Ranks professions into your Discord server! Seamlessly integrate in-game professions as Discord roles and manage them with simple command.
+A powerful Discord bot that brings your Broken Ranks professions into your Discord server! Automatically adds in-game professions as Discord roles and allows players to manage them with simple commands.
 
 ## ✨ Features
 
 - 💬 Easy-to-use `/profession` command for role management
 - ⚔️ Supports all Broken Ranks professions
 - 🛡️ Secure role management system
-- 🎨 Clean and intuitive interface
+- 🇺🇸 Supports English language
+- 🇵🇱 Supports Polish language
+
+## 💻 Usage
+
+### Commands
+
+- `/profession` - Assign profession roles to users based on their Broken Ranks character
+
+Example:
+
+```
+/profession <in-game profession name>
+```
+
+### Available Professions
+
+- 🔥 Fire Mage
+- ⚔️ Barbarian
+- 🏹 Archer
+- 🥊 Sheed
+- 🌿 Druid
+- 🛡️ Knight
+- 🪄 Voodoo
+
+## 🗺️ Roadmap (TODO List)
+
+- Full language support for English & Polish (I should add in next commit)
+- Setting up the bot on a VPS server
+- Creating a public website for the bot
+- The first released version of the bot for public use
 
 ## 🚀 Getting Started
 
@@ -31,6 +63,12 @@ A powerful Discord bot that brings your Broken Ranks professions into your Disco
 git clone https://github.com/PulseMind/brokenranks-discord-roles.git
 ```
 
+2. Go to Discord Bot files
+
+```bash
+cd ./discord-bot
+```
+
 2. Build the project
 
 ```bash
@@ -41,7 +79,7 @@ git clone https://github.com/PulseMind/brokenranks-discord-roles.git
 
 ```bash
 cp .env.example .env
-# Edit config.yml with your Discord Bot Token
+# Edit .env file with your Discord Bot Token and settings.
 ```
 
 4. Start the bot
@@ -49,28 +87,6 @@ cp .env.example .env
 ```bash
 ./gradlew run
 ```
-
-## 💻 Usage
-
-### Commands
-
-- `/profession` - Assign profession roles to users based on their Broken Ranks character
-
-Example:
-
-```
-/profession <in-game profession name>
-```
-
-### Available Professions
-
-- ⚔️ Barbarzyńca
-- 🏹 Łucznik
-- 🔮 Mag Ognia
-- 🛡️ Rycerz
-- 🗡️ Sheed
-- 🌿 Druid
-- ⚡ Vodoo
 
 ## 🤝 Contributing
 
