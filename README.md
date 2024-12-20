@@ -31,13 +31,13 @@ Example:
 
 ### Available Professions
 
-- 🔥 Fire Mage
-- ⚔️ Barbarian
-- 🏹 Archer
-- 🥊 Sheed
-- 🌿 Druid
-- 🛡️ Knight
-- 🪄 Voodoo
+- <img src="professions/fire_mage.png" alt="Fire Mage" width="20" height="20"> Fire Mage
+- <img src="professions/barbarian.png" alt="Barbarian" width="20" height="20"> Barbarian
+- <img src="professions/archer.png" alt="Archer" width="20" height="20"> Archer
+- <img src="professions/sheed.png" alt="Sheed" width="20" height="20"> Sheed
+- <img src="professions/druid.png" alt="Druid" width="20" height="20"> Druid
+- <img src="professions/knight.png" alt="Knight" width="20" height="20"> Knight
+- <img src="professions/voodoo.png" alt="Voodoo" width="20" height="20"> Voodoo
 
 ## 🗺️ Roadmap (TODO List)
 
