@@ -34,13 +34,13 @@ A powerful Discord bot that brings your Broken Ranks professions into your Disco
 
 | Icon                                                                              | Profession |
 | --------------------------------------------------------------------------------- | ---------- |
-| <img src="image/profession/fire_mage.png" alt="Fire Mage" width="20" height="20"> | Fire Mage  |
-| <img src="image/profession/barbarian.png" alt="Barbarian" width="20" height="20"> | Barbarian  |
-| <img src="image/profession/archer.png" alt="Archer" width="20" height="20">       | Archer     |
-| <img src="image/profession/sheed.png" alt="Sheed" width="20" height="20">         | Sheed      |
-| <img src="image/profession/druid.png" alt="Druid" width="20" height="20">         | Druid      |
-| <img src="image/profession/knight.png" alt="Knight" width="20" height="20">       | Knight     |
-| <img src="image/profession/voodoo.png" alt="Voodoo" width="20" height="20">       | Voodoo     |
+| <img src="image/profession/fire_mage.png" alt="Fire Mage" width="40" height="40"> | Fire Mage  |
+| <img src="image/profession/barbarian.png" alt="Barbarian" width="40" height="40"> | Barbarian  |
+| <img src="image/profession/archer.png" alt="Archer" width="40" height="40">       | Archer     |
+| <img src="image/profession/sheed.png" alt="Sheed" width="40" height="40">         | Sheed      |
+| <img src="image/profession/druid.png" alt="Druid" width="40" height="40">         | Druid      |
+| <img src="image/profession/knight.png" alt="Knight" width="40" height="40">       | Knight     |
+| <img src="image/profession/voodoo.png" alt="Voodoo" width="40" height="40">       | Voodoo     |
 
 ## 🚀 Installation Guide
 
