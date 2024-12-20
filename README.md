@@ -1,8 +1,8 @@
-![PULSEMIND BANNER](https://pulsemind.pl/image/BANNER.png)
+<div align="center">
+    <img src="image/logo.png" alt="PULSEMIND BANNER" width="350" />
+</div>
 
 <div align="center">
-
-<img src="image/logo.png" alt="PULSEMIND BANNER" width="350" />
 
 [![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/)
 [![Broken Ranks](https://img.shields.io/badge/Broken%20Ranks-FF4646?style=for-the-badge)](https://brokenranks.com/)
@@ -132,3 +132,5 @@ If you need help or want to report a bug:
 ---
 
 Made with ❤️ for the Broken Ranks community
+
+![PULSEMIND BANNER](https://pulsemind.pl/image/BANNER.png)
