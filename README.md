@@ -39,13 +39,6 @@ Example:
 - <img src="professions/knight.png" alt="Knight" width="20" height="20"> Knight
 - <img src="professions/voodoo.png" alt="Voodoo" width="20" height="20"> Voodoo
 
-## 🗺️ Roadmap (TODO List)
-
-- Full language support for English & Polish (I should add in next commit)
-- Setting up the bot on a VPS server
-- Creating a public website for the bot
-- The first released version of the bot for public use
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -97,6 +90,13 @@ Contributions are welcome! Feel free to:
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+## 🗺️ Roadmap (TODO List)
+
+- Full language support for English & Polish (I should add in next commit)
+- Setting up the bot on a VPS server
+- Creating a public website for the bot
+- The first released version of the bot for public use
 
 ## 📝 License
 
