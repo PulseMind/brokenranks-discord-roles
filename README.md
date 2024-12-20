@@ -62,20 +62,20 @@ git clone https://github.com/PulseMind/brokenranks-discord-roles.git
 cd ./discord-bot
 ```
 
-2. Build the project
+3. Build the project
 
 ```bash
 ./gradlew build
 ```
 
-3. Configure your environment variables
+4. Configure your environment variables
 
 ```bash
 cp .env.example .env
 # Edit .env file with your Discord Bot Token and settings.
 ```
 
-4. Start the bot
+5. Start the bot
 
 ```bash
 ./gradlew run
