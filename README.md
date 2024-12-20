@@ -1,6 +1,8 @@
-# 🎮 Broken Ranks Profession Bot
-
 ![PULSEMIND BANNER](https://pulsemind.pl/image/BANNER.png)
+
+<div align="center">
+
+<img src="image/logo.png" alt="PULSEMIND BANNER" width="350" />
 
 [![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/)
 [![Broken Ranks](https://img.shields.io/badge/Broken%20Ranks-FF4646?style=for-the-badge)](https://brokenranks.com/)
@@ -8,6 +10,8 @@
 [![GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge)](https://www.gnu.org/licenses/gpl-3.0)
 
 A powerful Discord bot that brings your Broken Ranks professions into your Discord server! Automatically adds in-game professions as Discord roles and allows players to manage them with simple commands.
+
+</div>
 
 ## ✨ Features
 
@@ -31,13 +35,13 @@ Example:
 
 ### Available Professions
 
-- <img src="professions/fire_mage.png" alt="Fire Mage" width="20" height="20"> Fire Mage
-- <img src="professions/barbarian.png" alt="Barbarian" width="20" height="20"> Barbarian
-- <img src="professions/archer.png" alt="Archer" width="20" height="20"> Archer
-- <img src="professions/sheed.png" alt="Sheed" width="20" height="20"> Sheed
-- <img src="professions/druid.png" alt="Druid" width="20" height="20"> Druid
-- <img src="professions/knight.png" alt="Knight" width="20" height="20"> Knight
-- <img src="professions/voodoo.png" alt="Voodoo" width="20" height="20"> Voodoo
+- <img src="image/profession/fire_mage.png" alt="Fire Mage" width="20" height="20"> Fire Mage
+- <img src="image/profession/barbarian.png" alt="Barbarian" width="20" height="20"> Barbarian
+- <img src="image/profession/archer.png" alt="Archer" width="20" height="20"> Archer
+- <img src="image/profession/sheed.png" alt="Sheed" width="20" height="20"> Sheed
+- <img src="image/profession/druid.png" alt="Druid" width="20" height="20"> Druid
+- <img src="image/profession/knight.png" alt="Knight" width="20" height="20"> Knight
+- <img src="image/profession/voodoo.png" alt="Voodoo" width="20" height="20"> Voodoo
 
 ## 🚀 Getting Started
 
