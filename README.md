@@ -119,8 +119,8 @@ Need help or found a bug?
 
 ---
 
+![PULSEMIND BANNER](https://pulsemind.pl/image/BANNER.png)
+
 <div align="center">
     Made with ❤️ for the Broken Ranks community
 </div>
-
-![PULSEMIND BANNER](https://pulsemind.pl/image/BANNER.png)
