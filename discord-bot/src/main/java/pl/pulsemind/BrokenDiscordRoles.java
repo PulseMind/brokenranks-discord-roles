@@ -8,6 +8,7 @@ import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import pl.pulsemind.language.Language;
 import pl.pulsemind.listeners.ReadyListener;
 import pl.pulsemind.listeners.CommandListener;
 
@@ -26,8 +27,9 @@ public class BrokenDiscordRoles {
     @Setter(AccessLevel.PRIVATE)
     private JDA jda;
 
+    @NonNull
     @Getter
-    private final boolean isPolish = Boolean.parseBoolean(dotEnv.get("POLISH_LANGUAGE"));
+    private Language lang = new Language(this.dotEnv.get("LANGUAGE"));
 
     private void registerListeners(@NonNull JDABuilder jdaBuilder) {
         jdaBuilder.addEventListeners(

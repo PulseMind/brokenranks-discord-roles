@@ -1,5 +1,6 @@
 package pl.pulsemind.listeners;
 
+import lombok.Getter;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Role;
@@ -7,6 +8,8 @@ import net.dv8tion.jda.api.interactions.commands.Command;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.events.interaction.command.CommandAutoCompleteInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import pl.pulsemind.Main;
+import pl.pulsemind.language.Language;
 import pl.pulsemind.proffesion.Profession;
 import pl.pulsemind.utils.RoleUtil;
 
@@ -17,6 +20,9 @@ import java.util.stream.Collectors;
 
 public class CommandListener extends ListenerAdapter {
 
+    @Getter
+    private final Language lang = Main.instance().getLang();
+
     @Override
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
         Guild guild = event.getGuild();
@@ -24,9 +30,9 @@ public class CommandListener extends ListenerAdapter {
         if(guild == null || member == null)
             return;
 
-        if(event.getName().equalsIgnoreCase("profession")) {
+        if(event.getName().equalsIgnoreCase(this.getLang().getString("profession_cmd_name"))) {
             String guildId = guild.getId();
-            String roleName = Objects.requireNonNull(event.getOption("profession")).getAsString();
+            String roleName = Objects.requireNonNull(event.getOption(this.getLang().getString("profession_cmd_argument"))).getAsString();
 
             Role role = RoleUtil.getRole(guildId, roleName);
             Profession profession = Arrays.stream(Profession.values())
@@ -34,28 +40,29 @@ public class CommandListener extends ListenerAdapter {
                     .findAny().orElse(null);
 
             if(role == null || profession == null) {
-                event.reply(String.format("Profesja **%s** nie została odnaleziona.", roleName)).queue();
+                event.reply(this.getLang().getString("profession_cmd_not_found", roleName)).queue();
                 return;
             }
 
             if(RoleUtil.hasRole(member, role.getId())) {
                 guild.removeRoleFromMember(member, role).queue(
-                        success -> event.reply(String.format("Profesja %s została usunięta.", role.getAsMention())).queue(),
-                        error -> event.reply(String.format("**Błąd!** Nie udało się usunąć profesji. (%s)", error.getMessage())).queue()
+                        success -> event.reply(this.getLang().getString("profession_cmd_deleted", role.getAsMention())).queue(),
+                        error -> event.reply(this.getLang().getString("profession_cmd_error", error.getMessage())).queue()
                 );
                 return;
             }
 
             guild.addRoleToMember(member, role).queue(
-                    success -> event.reply(String.format("Profesja %s została dodana.", role.getAsMention())).queue(),
-                    error -> event.reply(String.format("**Błąd!** Nie udało się dodać profesji. (%s)", error.getMessage())).queue()
+                    success -> event.reply(this.getLang().getString("profession_cmd_added", role.getAsMention())).queue(),
+                    error -> event.reply(this.getLang().getString("profession_cmd_error", error.getMessage())).queue()
             );
         }
     }
 
     @Override
     public void onCommandAutoCompleteInteraction(CommandAutoCompleteInteractionEvent event) {
-        if (event.getName().equalsIgnoreCase("profession") && event.getFocusedOption().getName().equals("profession")) {
+        if (event.getName().equalsIgnoreCase(this.getLang().getString("profession_cmd_name"))
+                && event.getFocusedOption().getName().equals(this.getLang().getString("profession_cmd_argument"))) {
             final List<Command.Choice> options = Arrays.stream(Profession.values())
                     .map(Profession::getRoleName)
                     .filter(prof -> prof.toLowerCase().contains(event.getFocusedOption().getValue().toLowerCase()))
