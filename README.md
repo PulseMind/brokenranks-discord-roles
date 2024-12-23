@@ -80,7 +80,6 @@ cp .env.example .env
 
 ## 🗺️ Development Roadmap
 
-- [ ] Complete English & Polish language support
 - [ ] VPS server deployment
 - [ ] Public website launch
 - [ ] First public release
